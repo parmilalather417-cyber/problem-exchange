@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problem Exchange</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>🚀 Problem Exchange</h1>
+  <p>Share your problems and help others.</p>
+
+  <!-- Search -->
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search problems..."
+    onkeyup="showProblems()"
+  >
+
+  <br><br>
+
+  <!-- Filter -->
+  <select id="filterCategory" onchange="showProblems()">
+    <option value="All">📂 All Categories</option>
+    <option value="Education">📚 Education</option>
+    <option value="Business">💼 Business</option>
+    <option value="Technology">💻 Technology</option>
+    <option value="Health">❤️ Health</option>
+    <option value="Finance">💰 Finance</option>
+    <option value="Other">📌 Other</option>
+  </select>
+
+  <br><br>
+
+  <!-- New Problem Category -->
+  <select id="category">
+    <option value="Education">📚 Education</option>
+    <option value="Business">💼 Business</option>
+    <option value="Technology">💻 Technology</option>
+    <option value="Health">❤️ Health</option>
+    <option value="Finance">💰 Finance</option>
+    <option value="Other">📌 Other</option>
+  </select>
+
+  <br><br>
+
+  <!-- Problem -->
+  <textarea
+    id="problemInput"
+    placeholder="Write your problem here..."
+  ></textarea>
+
+  <br><br>
+
+  <button onclick="addProblem()">
+    📤 Post Problem
+  </button>
+
+  <hr>
+
+  <div id="problemList"></div>
+
+  <!-- Firebase -->
+  <script type="module" src="firebase.js"></script>
+
+  <!-- App -->
+  <script src="app.js"></script>
+
+</body>
+</html>
